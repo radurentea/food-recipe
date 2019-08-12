@@ -13,7 +13,14 @@
       </div>
       <div class="field add-ingredient">
         <label for="add-ingredients">Add an ingredient:</label>
-        <input type="text" name="add-ingredient" @keydown.enter.prevent="addIng" v-model="another" />
+        <input
+          type="text"
+          class="input-ingredient"
+          name="add-ingredient"
+          @keydown.tab.prevent="addIng"
+          v-model="another"
+        />
+        <button class="btn btn-plus teal" @click.prevent="addIng">+</button>
       </div>
       <div class="field center-align">
         <p v-if="feedback" class="red-text">{{ feedback }}</p>
@@ -101,5 +108,14 @@ export default {
   color: #aaa;
   font-size: 1.4em;
   cursor: pointer;
+}
+.add-meal .input-ingredient {
+  display: inline-block;
+  max-width: 615px;
+}
+
+.add-meal .btn-plus {
+  margin-right: 0;
+  padding: 0 15px;
 }
 </style>
