@@ -1,6 +1,6 @@
 # Food Recipes
 
-> A food recipes project made with VueJs
+> A food recipes project made with VueJs, Firebase and MaterializeCSS
 
 ## Instructions
 
